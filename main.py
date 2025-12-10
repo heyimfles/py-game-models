@@ -20,7 +20,7 @@ def get_fk(
         info: dict,
         instance_list: list,
         player: str
-) -> Model|None:
+) -> Model | None:
     if info.get(player):
         fk_name = info.get(player).get("name")
         for instance in instance_list:
@@ -82,6 +82,7 @@ def create_player(
             }
         )
     return
+
 
 def main() -> None:
     Player.objects.all().delete()
